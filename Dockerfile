@@ -9,7 +9,7 @@ RUN apk update && apk add bash
 # Source: https://stackoverflow.com/a/59243474/3128926
 RUN apk add --no-cache curl tar bash && \
     mkdir -p /usr/local/bin && \
-    curl -fsSL -o /tmp/apache-maven.tar.gz https://apache.osuosl.org/maven/maven-3/3.8.2/binaries/apache-maven-3.8.2-bin.tar.gz \
+    curl -fsSL -o /tmp/apache-maven.tar.gz https://apache.osuosl.org/maven/maven-3/3.8.2/binaries/apache-maven-3.8.2-bin.tar.gz && \
     tar -xzf /tmp/apache-maven.tar.gz -C /tmp && \
     mv /tmp/apache-maven-3.8.2 /usr/local/bin/mvn && \
     rm -f /tmp/apache-maven.tar.gz && \
